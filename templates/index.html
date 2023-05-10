@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Judul Halaman -->
+	<title>SMSGuard</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Icon -->
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href={{ url_for('static', filename='/css/bootstrap.min.css') }} type="text/css">
+	<link rel="stylesheet" href={{ url_for('static', filename='/css/client_side.css') }}  type="text/css">
+	
+	<!-- JavaScript -->
+	<script src={{ url_for('static', filename='/js/jquery_3.6.0.min.js') }} ></script>
+	<script src={{ url_for('static', filename='/js/bootstrap_3.4.1.min.js') }} ></script>
+
+	<!-- CDN -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+
+<body id="halamanku" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+	<!-- Navigation Bar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<!-- Logo -->
+			<img src={{ url_for('static', filename='/images/logo.png') }} alt="Orbit Logo" width="70" align="left">
+
+			
+			<!-- Daftar Halaman -->
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#informasi">INFORMASI</a></li>
+					<li><a href="#aplikasi">APLIKASI</a></li>
+					<li><a href="#anggotaKelompok">ANGGOTA KELOMPOK</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Bagian Halaman (Informasi) -->
+	<div id="informasi" class="container-fluid">
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-sm-6">
+				<!-- Deskripsi Aplikasi -->
+				<h2>SMSGuard</h2>
+				<p style="text-align: justify;text-justify: inter-word;">
+					SMSGuard adalah aplikasi berbasis AI yang berfungsi untuk melindungi pengguna dari penipuan SMS. 
+					Aplikasi ini dapat mengklasifikasikan SMS yang masuk ke dalam kategori normal, promo atau penipuan/fraud 
+					dengan SMSGuard akan memberikan label pada sms ketika ada SMS yang terindikasi sebagai penipuan 
+					sehingga pengguna dapat menghindari tindakan yang merugikan. Dengan SMSGuard, pengguna dapat merasa 
+					lebih aman dan nyaman saat menggunakan layanan SMS.
+				</p>
+			    <br>
+
+				<!-- Tombol Mulai -->
+				<nav id="navgo" class="navbar" style="background-color:#ffffff;z-index: 0;">
+					<ul class="nav nav-pills">
+						<li class="nav-item">
+							<a class="btn btn-default btn-lg" href="#aplikasi" style="background-color:#2d3e50">Mulai</a>
+						</li>
+					</ul>
+				</nav>
+
+			</div>
+			<div class="col-sm-6">
+				<br>
+				<br>
+				<!-- Gambar Deskripsi Aplikasi -->
+				<img src={{ url_for('static', filename='/images/hero.png') }} width="500" ></img>
+			</div>
+		</div>
+	</div>
+
+	<!-- Bagian Halaman (Aplikasi) -->
+	<div id="aplikasi" data-bs-spy="scroll" data-bs-target="#navgo" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+		<br><br>
+		<div class="row">
+			<div class="col-sm-6">
+				<!-- HP 1 (Oknum) -->
+				<div class="phone_bg1">
+
+					<br>
+					<br>
+					  
+					<div class="chat-box1">
+						<!-- Header 1 (Oknum) -->
+						<div class="chat-box-header1">Oknum</div>
+						
+						<div class="chat-box-body1">
+							<div class="chat-box-overlay1"></div>
+							<div class="chat-logs1">
+								<!-- Chat Log 1 (Oknum) -->
+							</div>
+						</div>
+						
+						<div class="chat-input1">      
+							<form>
+								<!-- Input Chat 1 (Oknum) -->
+								<input type="text" id="chat-input1" placeholder="Kirim pesan singkat ..."/>
+								
+								<!-- Tombol Send 1 (Oknum) -->
+								<button type="submit" class="chat-submit1" id="chat-submit1"><i class="material-icons">send</i></button>
+							</form>      
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-6">
+				<!-- HP 2 (Anda) -->
+				<div class="phone_bg2">
+
+					<br>
+					<br>
+					  
+					<div class="chat-box2">
+						<!-- Header 2 (Anda) -->
+						<div class="chat-box-header2">Anda</div>
+						
+						<div class="chat-box-body2">
+							<div class="chat-box-overlay2"></div>
+							<div class="chat-logs2">
+								<!-- Chat Log 2 (Anda) -->
+							</div>
+						</div>
+						
+						<div class="chat-input2">      
+							<form>
+								<!-- Input Chat 2 (Anda) -->
+								<input type="text" id="chat-input2" placeholder="Kirim pesan singkat ..."/>
+								
+								<!-- Tombol Send 2 (Anda) -->
+								<button type="submit" class="chat-submit2" id="chat-submit2"><i class="material-icons">send</i></button>
+							</form>      
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Bagian Halaman (Anggota Kelompok) -->
+	<div id="anggotaKelompok" class="container-fluid text-center">
+		<br>
+		<h2>ANGGOTA KELOMPOK</h2>
+		<br>
+		<div class="row slideanim p-5">
+			<div class="row">
+				<div class="col-sm-5 col-md-3">
+				  <div class="thumbnail">
+					<img src={{ url_for('static', filename='/images/rizki.jpeg') }} alt="rizki">
+					<div class="caption">
+					  <h3>RIZKI SETIABUDI</h3>
+					  <p>Universitas Amikom Purwokerto</p>
+					</div>
+					<div class="social-media">
+						<a href=" https://www.instagram.com/rizkisetiabudi_" class="fab fa-instagram" target="_blank"></a>
+						<a href="https://github.com/rizkisetiabudi21" class="fab fa-github" target="_blank"></a>	
+					</div>
+				  </div>
+				</div>
+				<div class="col-sm-5 col-md-3">
+				  <div class="thumbnail">
+					<img src={{ url_for('static', filename='/images/ridho.jpg') }} alt="ridho">
+					<div class="caption">
+					  <h3>RIDHO KUNCORO ADJI WIBOWO</h3>
+					  <p>Universitas Nusantara PGRI Kediri</p>
+					</div>
+					<div class="social-media">
+						<a href=" https://www.instagram.com/kuncr_" class="fab fa-instagram" target="_blank"></a>
+						<a href="https://github.com/kuncoroadjie" class="fab fa-github" target="_blank"></a>	
+					</div>
+				  </div>
+				</div>
+				<div class="col-sm-5 col-md-3">
+				  <div class="thumbnail">
+					<img src={{ url_for('static', filename='/images/rafi.jpeg') }} alt="rafi">
+					<div class="caption">
+					  <h3>RAFI NURYANTORO PUTRI</h3>
+					  <p>Universitas Muhammadiyah Malang</p>
+					</div>
+					<div class="social-media">
+						<a href=" https://www.instagram.com/rafiput" class="fab fa-instagram" target="_blank"></a>
+						<a href="https://github.com/rafiputri" class="fab fa-github" target="_blank"></a>	
+					</div>
+				  </div>
+				</div>
+				<div class="col-sm-5 col-md-3">
+				  <div class="thumbnail">
+					<img src={{ url_for('static', filename='/images/ami.jpeg') }} alt="ami">
+					<div class="caption">
+					  <h3>AMI DAELAMI ICHSANA</h3>
+					  <p>Politektik Harapan Bersama</p>
+					</div>
+					<div class="social-media">
+						<a href="https://www.instagram.com/amidaelami______" class="fab fa-instagram" target="_blank"></a>
+						<a href="https://github.com/amidaelami20090133" class="fab fa-github" target="_blank"></a>	
+					</div>
+				  </div>
+				</div>
+			  </div>
+		</div>
+	</div>
+
+	
+
+	<!-- Footer -->
+	<footer class="container-fluid text-center">
+		<a href="#halamanku" title="To Top" class="btn-top-wrapper">
+			<span class="glyphicon glyphicon-chevron-up"></span>
+		</a>
+		<p>Orbit Future Academy <br> <a href="https://orbitfutureacademy.id/">orbitfutureacademy.id</a></p>
+	</footer>
+
+	<!-- JavaScript untuk Animasi Scroll dan Prediksi Model -->
+	<script  src={{ url_for('static', filename='/js/client_side.js') }}></script>
+
+</body>
+</html>
